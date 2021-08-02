@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Bold.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+.body {
+  margin: 0;
+  font-family: 'Roboto';
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.wrapper {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.header {
+  width: 100%;
+}
+
+.header_wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+
+.header_logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header_title {
+  padding: 0.2rem 0.2rem;
+}
+
+.header_title::before, .header_title::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 2px solid ;
+  border-top: transparent;
+  border-left: transparent;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.header_title::before {
+  top: 0;
+  left: 0;
+  transform: rotate(180deg);
+  color: #FF005E;
+}
+
+.header_title::after{
+  bottom: 0;
+  right: 0;
+  color: #FFFFFF;
+}
+
+.header_logo:hover .header_title::before, .header_logo:hover .header_title::after {
+  opacity: 1;
+}
+
+.header_logo_icon {
+  width: 4rem;
+  height: 5rem;
+  margin-right: 1rem;
+}
+
+.header_title {
+  font-size: 2.3rem;
+  color: #FFFFFF;
+  position: relative;
+}
+
+.header_subtitle {
+  background: transparent;
+  color: #FF005E;
+}
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 40%;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 0.4rem 0.4rem;
+  position: relative;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.nav_link::before, .nav_link::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #FF005E;
+  border-top: transparent;
+  border-left: transparent;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.nav_link::before {
+  top: 0;
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.nav_link::after{
+  bottom: 0;
+  right: 0;
+}
+
+.nav_link:hover::before, .nav_link:hover::after {
+  display: block;
+  opacity: 1;
+}
+
+.nav_link:hover {
+  color: #FF005E;
+}
