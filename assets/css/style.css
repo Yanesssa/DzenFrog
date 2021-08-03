@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 @font-face {
@@ -10,11 +11,13 @@
   font-style: normal;
   font-weight: normal;
 }
+html {
+  font-size: 18px;
+}
 
 .body {
   margin: 0;
   font-family: 'Roboto';
-  font-size: 18px;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -28,6 +31,40 @@
 .header {
   width: 100%;
 }
+
+.header.nav_opened .header_menu {
+  background-color: #333839;
+  transition: 0.4s;
+}
+
+.header.nav_opened .nav {
+  height: auto;
+  background-color: #333839;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  flex-direction: column;
+  transition: 0.4s;
+}
+
+.header.nav_opened .header_menu_line:nth-child(1) {
+  transform: rotate(45deg) translate(5px,7px);
+}
+
+.header.nav_opened .header_menu_line:nth-child(2) {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.header.nav_opened .header_menu_line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px,-7px);
+}
+
 
 .header_wrapper {
   display: flex;
@@ -94,6 +131,38 @@
   color: #FF005E;
 }
 
+.header_button {
+  height: 1.5rem;
+  width: 1.6rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+}
+
+.header_menu {
+  display: none;
+  padding: 1rem;
+  margin-top: 2.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  /* background-color: #333839; */
+  height: 100%;
+}
+
+.header_menu_line {
+  width: 100%;
+  height: 4px;
+  background-color: #FFFFFF;
+  border-radius: 3px;
+  transition: .3s;
+}
+
+.header.active .nav {
+  height: 100vh;
+}
 
 .nav {
   display: flex;
@@ -145,3 +214,54 @@
 .nav_link:hover {
   color: #FF005E;
 }
+
+@media screen and (max-width: 1450px) {
+  .wrapper {
+    max-width: 90vw;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  html {
+    font-size: 14px;
+  }
+
+  .header {
+    margin-bottom: 3rem;
+  }
+
+  .header_wrapper {
+    position: relative;
+  }
+
+  .header_menu {
+    display: flex;
+  }
+
+  .nav {
+    height: 0%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+  }
+
+  .nav_link {
+    padding: 0.7rem 0rem;
+    /* background-color: aqua; */
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav_link:first-child {
+    padding-top: 1.4rem;
+  }
+
+  .nav_link:last-child {
+    padding-bottom: 1.4rem;
+  }
+}
+
