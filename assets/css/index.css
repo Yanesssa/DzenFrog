@@ -14,8 +14,8 @@ html {
   overflow-y: hidden;
 }
 
-.active{
-  color: #FF005E;
+.header {
+ background-color: transparent;
 }
 
 .popup {
@@ -108,7 +108,7 @@ html {
   width: 50%;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1100px) {
   .main_wrapper {
     flex-direction: column-reverse;
     align-items: center;

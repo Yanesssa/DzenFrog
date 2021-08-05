@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/table.css">
+  <title>DzenFrog</title>
+</head>
+<body class="body body_table">
+  <header class="header">
+    <div class="wrapper header_wrapper">
+      <div class="header_logo">
+        <img src="assets/images/logo.svg" alt="logo" class="header_logo_icon">
+
+        <h1 class="header_title">dzen<mark class="header_subtitle">FROG</mark></h1>
+      </div>
+
+      <div class="header_menu">
+        <button class="header_button">
+          <div class="header_menu_line"></div>
+          <div class="header_menu_line"></div>
+          <div class="header_menu_line"></div>
+        </button>
+      </div>
+      
+      <nav class="header_nav nav">
+        <a href="index.html" class="nav_link">Главная</a>
+        <a href="table.html" class="nav_link active">Таблица</a>
+        <a href="form.html" class="nav_link">Форма</a>
+        <a href="about.html" class="nav_link">О нас</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main main_table">
+    <div class="page_wrapper wrapper">
+        <h2 class="main_title">Таблица</h2>
+        <div class="table_filters">
+          <select class="table_select">
+            <option class="table_select_option">Мадагаскар</option>
+            <option class="table_select_option">Камерун</option>
+            <option class="table_select_option">Северная Америка</option>
+            <option class="table_select_option">Бразилия</option>
+          </select>
+
+          <div class="table_search">
+            <input type="text" class="table_search_input">
+            <span class="table_search_placeholder">Поиск</span>
+            <img src="assets/images/loupe.svg" alt="Лупа" class="table_search_icon">
+          </div>
+        </div>
+        
+        <table class="table">
+          <thead class="table_head">
+            <tr class="table_head_row table_row">
+              <th class="table_id table_cell">id</th>
+              <th class="table_name table_cell">Название</th>
+              <th class="table_habitat table_cell">Ареал</th>
+              <th class="table_description table_cell">Описание</th>
+            </tr>
+          </thead>
+
+          <tbody class="table_body">
+            <tr class="table_row">
+              <td class="table_id table_cell" data-label="id">0</td>
+              <td class="table_name table_cell" data-label="Название">Лягушка Веельзевула</td>
+              <td class="table_habitat table_cell" data-label="Ареал">Мадагаскар</td>
+              <td class="table_description table_cell" data-label="Описание">
+                <p class="table_description_text">Сейчас эту самую крупную лягушку в мире вы сможете встретить только в музее. Это ископаемое земноводное Beelzebufo ampinga, длина тела которого составляла около 40 сантиметров в длину, а вес – до 4,5 килограмм. Лягушка Веельзевула имела короткие ноги, так что вряд ли она могла прыгнуть далеко. Зато, как и у всех лягушек, ее мощный широкий рот был усеян зубами. Ближайшие родственники гигантской лягушки сейчас проживают в Южной Америке.</p>
+              </td>
+            </tr>
+
+            <tr class="table_row">
+              <td class="table_id table_cell" data-label="id">1</td>
+              <td class="table_name table_cell" data-label="Название">Лягушка-голиаф</td>
+              <td class="table_habitat table_cell" data-label="Ареал">Камерун</td>
+              <td class="table_description table_cell" data-label="Описание">
+                <p class="table_description_text">Длина тела лягушки-голиафа, может быть, и не позволяет ей претендовать на золотой пьедестал – «всего» 32 сантиметра. Зато ее прыжок на 3 метра, оставляет всех конкурентов далеко позади. Современная, самая большая лягушка на свете проживает в Центральной Африке.</p>
+              </td>
+            </tr>
+
+            <tr class="table_row">
+              <td class="table_id table_cell" data-label="id">2</td>
+              <td class="table_name table_cell" data-label="Название">Лягушка-бык</td>
+              <td class="table_habitat table_cell" data-label="Ареал">Северная Америка</td>
+              <td class="table_description table_cell" data-label="Описание">
+                <p class="table_description_text">Следующая по величине амфибия – до 25 сантиметров длины, проживает в Северной Америке. Отдельные особи достигают 3 килограммов веса. Неплохое «лакомство» для хищника, кажется? Однако чаще всего выигравшим оказывается именно земноводное. Иногда жертвами прожорливой амфибии оказываются даже малютки-аллигаторы!</p>
+              </td>
+            </tr>
+
+            <tr class="table_row">
+              <td class="table_id table_cell" data-label="id">3</td>
+              <td class="table_name table_cell" data-label="Название">Рогатка изменчивая</td>
+              <td class="table_habitat table_cell" data-label="Ареал">Бразилия</td>
+              <td class="table_description table_cell" data-label="Описание">
+                <p class="table_description_text">Рогатки проживают исключительно в Южной Америке. К своим устрашающим размерам (до 20 сантиметров) лягушка прибавляет внушительное украшение на голове – рога и гребень. Кстати, рогатки считаются современными родственниками лягушки Веельзевула, правда, изрядно «похудевшими».</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </main>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

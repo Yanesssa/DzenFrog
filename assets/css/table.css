@@ -1,0 +1,172 @@
+.table {
+  margin-top: 1rem;
+}
+
+.table_filters {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table_select {
+  background: transparent;
+  border: none;
+  color: #C6C6C6;
+  border-bottom: 1px solid #FF005E;
+  width: 300px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.table_select_option {
+  background-color: #333839;
+  color: #FFFFFF;
+}
+
+.table_select_option:nth-child(odd) {
+  background-color: #555555;
+}
+
+.table_search {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 300px;
+}
+
+.table_search_placeholder {
+  position: absolute;
+  top: 0.4rem;
+  left: 0.5rem;
+  color: #C6C6C6;
+  transition: 0.4s;
+}
+
+.table_search_input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #FF005E;
+  padding: 0.4rem 1.5rem 0.4rem 0.4rem;
+  outline: none;
+  font-size: 1rem;
+  color: #FFFFFF;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.table_search_input:focus + .table_search_placeholder{
+  top: -0.5rem;
+  left: 0;
+  font-size: 0.7rem;
+}
+ 
+.table_search_icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  position: absolute;
+  right: 0;
+  top: 0.4rem;
+}
+
+.table_head {
+  color: #C6C6C6;
+  font-weight: bold;
+}
+
+.table_row {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #555555;
+}
+
+.table_body .table_row:nth-child(odd) {
+  background-color: rgba(55, 55, 55, .3);
+}
+
+.table_id {
+  flex: 1;
+}
+
+.table_name {
+  flex: 3;
+}
+
+.table_habitat {
+  flex: 3;
+}
+
+.table_description {
+  flex: 7;
+}
+
+.table_description_text {
+  text-align: justify;
+}
+
+.table_cell {
+  text-align: start;
+}
+
+@media screen and (max-width: 800px) {
+  .table {
+    font-size: 0.85rem;
+  }
+
+  .table_head {
+    display: none;
+  }
+
+  .table_filters {
+    flex-direction: column;
+  }
+
+  .table_select {
+    max-width: 300px;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .table_search {
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .table_row {
+    background-color: #333839;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    flex-direction: column;
+  }
+
+  .table_cell {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 17%;
+  }
+
+  .table_cell::before {
+    content: attr(data-label);
+    display: block;
+    width: 15%;
+    position: absolute;
+    left: 0;
+    color: #C6C6C6;
+  }
+
+  .table_body .table_row:nth-child(odd){
+    background-color: #333839;
+  }
+
+  
+}
+
+@media screen and (max-width: 500px) {
+  .table_cell {
+    padding-left: 35%;
+  }
+
+  /* .table_select {
+    width: 50px;
+  } */
+}
