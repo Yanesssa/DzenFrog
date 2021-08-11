@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/form.css">
+  <title>DzenFrog</title>
+</head>
+<body class="body_form body">
+  <header class="header">
+    <div class="wrapper header_wrapper">
+      <div class="header_logo">
+        <img src="assets/images/logo.svg" alt="logo" class="header_logo_icon">
+
+        <h1 class="header_title">dzen<mark class="header_subtitle">FROG</mark></h1>
+      </div>
+
+      <div class="header_menu">
+        <button class="header_button">
+          <div class="header_menu_line"></div>
+          <div class="header_menu_line"></div>
+          <div class="header_menu_line"></div>
+        </button>
+      </div>
+      
+      <nav class="header_nav nav">
+        <a href="index.html" class="nav_link">Главная</a>
+        <a href="table.html" class="nav_link">Таблица</a>
+        <a href="form.html" class="nav_link active">Форма</a>
+        <a href="about.html" class="nav_link">О нас</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main main_form">
+    <div class="page_wrapper wrapper">
+      <h2 class="main_title">Форма добавления лягушки</h2>
+
+      <form action="#" class="form">
+        <div class="form_item">
+          <input name="name" type="text" class="form_input form_name ">
+          <span class="form_item_placeholder">Название</span>
+        </div>
+
+        <div class="form_item">
+          <input name="habitat" type="text" class="form_input form_habitat">
+          <span class="form_item_placeholder">Ареал обитания</span>
+        </div>
+
+        <div class="form_item">
+          <textarea name="description" id="" cols="30" rows="10" class="form_input form_description"></textarea>
+          <span class="form_item_placeholder">Описание</span>
+        </div>
+
+        <div class="form_actions">
+          <button class="form_button form_clear">
+            <span class="form_button_span form_button_span_clear">Стереть</span>
+
+            <img class="form_button_icon form_button_icon_clear" src="assets/images/eraser-tool.svg" alt="Стереть">
+          </button>
+        
+          <button class="form_button form_submit">
+            <span class="form_button_span form_button_span_submit">Подтвердить</span>
+
+            <img class="form_button_icon form_button_icon_submit" src="assets/images/confirm.svg" alt="Подтвердить">
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/form.js"></script>
+</body>
+</html>
